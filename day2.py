@@ -9,7 +9,7 @@ bag_contents = {
 }
 
 sum = 0
-with open("2023/day2.txt") as f:
+with open("Advent-2023/day2.txt") as f:
     for l in f.readlines():
         s = l.strip().removeprefix("Game")
         id, game = s.split(":")
@@ -27,7 +27,7 @@ print(sum)
 
 
 sum = 0
-with open("2023/day2.txt") as f:
+with open("Advent-2023/day2.txt") as f:
     for l in f.readlines():
         s = l.strip().removeprefix("Game")
         id, game = s.split(":")

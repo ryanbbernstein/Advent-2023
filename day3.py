@@ -1,6 +1,6 @@
 
 sum = 0
-with open("2023/day3.txt") as f:
+with open("Advent-2023/day3.txt") as f:
     grid = f.read().splitlines()
 
     num_set = set()
@@ -25,7 +25,7 @@ with open("2023/day3.txt") as f:
 print(sum)
 
 sum = 0
-with open("2023/day3.txt") as f:
+with open("Advent-2023/day3.txt") as f:
     grid = f.read().splitlines()
     for r, row in enumerate(grid):
         for c, ch in enumerate(row):

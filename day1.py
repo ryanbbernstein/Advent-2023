@@ -1,6 +1,6 @@
 
 sum = 0
-with open("2023/day1.txt") as f:
+with open("Advent-2023/day1.txt") as f:
     for l in f.readlines():
         s = l.strip()
         first = ""
@@ -29,7 +29,7 @@ mapping = {
 }
 
 sum = 0
-with open("2023/day1.txt") as f:
+with open("Advent-2023/day1.txt") as f:
     for l in f.readlines():
         s = l.strip()
         for k,v in mapping.items():
