@@ -4,12 +4,12 @@ with open("Advent-2023/day3.txt") as f:
     grid = f.read().splitlines()
 
     num_set = set()
-    for r, row in enumerate(grid):
-        for c, ch in enumerate(row):
-            if ch.isdigit() or ch == ".":
+    for row_index, row in enumerate(grid):
+        for col_index, char in enumerate(row):
+            if char.isdigit() or char == ".":
                 continue
-            for curr_row in [r - 1, r, r + 1]:
-                for curr_col in [c - 1, c, c + 1]:
+            for curr_row in [row_index - 1, row_index, row_index + 1]:
+                for curr_col in [col_index - 1, col_index, col_index + 1]:
                     if curr_row < 0 or curr_row >= len(grid) or curr_col < 0 or curr_col >= len(grid[curr_row]) or not grid[curr_row][curr_col].isdigit():
                         continue
                     while curr_col > 0 and grid[curr_row][curr_col - 1].isdigit():
@@ -27,13 +27,13 @@ print(sum)
 sum = 0
 with open("Advent-2023/day3.txt") as f:
     grid = f.read().splitlines()
-    for r, row in enumerate(grid):
-        for c, ch in enumerate(row):
-            if ch.isdigit() or ch == ".":
+    for row_index, row in enumerate(grid):
+        for col_index, char in enumerate(row):
+            if char.isdigit() or char == ".":
                 continue
             num_set = set()
-            for curr_row in [r - 1, r, r + 1]:
-                for curr_col in [c - 1, c, c + 1]:
+            for curr_row in [row_index - 1, row_index, row_index + 1]:
+                for curr_col in [col_index - 1, col_index, col_index + 1]:
                     if curr_row < 0 or curr_row >= len(grid) or curr_col < 0 or curr_col >= len(grid[curr_row]) or not grid[curr_row][curr_col].isdigit():
                         continue
                     while curr_col > 0 and grid[curr_row][curr_col - 1].isdigit():
